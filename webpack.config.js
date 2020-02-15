@@ -15,6 +15,16 @@ module.exports = {
           'style-loader',
           'css-loader'
         ]
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg|icon)$/i,
+        use: {
+          loader: 'file-loader',
+          options: {
+            limit: 2048,
+            name: './image/[name].[ext]'
+          }
+        }
       }
     ]
   },
