@@ -7,6 +7,17 @@ module.exports = {
     filename: 'main.js',   // コンパイル先ファイル名
     path: outputPath       // コンパイル先ファイルのパス
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      }
+    ]
+  },
   devServer: {
     contentBase: outputPath // ドキュメントルートの指定
   }

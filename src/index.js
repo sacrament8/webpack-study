@@ -1,6 +1,7 @@
 import _ from 'lodash'
 import * as utilities from './utilities'
-import CatHoge from './utilities'
+import './style.css'
+
 function component() {
   const element = document.createElement('div');
   const array = ['Hello', 'webpack', utilities.NiJou(10), utilities.NAME, utilities.hoge]
@@ -9,4 +10,4 @@ function component() {
 }
 
 document.body.appendChild(component());
-console.log(CatHoge.say());
+document.body.classList.add('haikei')
